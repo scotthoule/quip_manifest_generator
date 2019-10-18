@@ -59,7 +59,7 @@ public class FileGen {
 
         } catch (Exception ex) {
             ex.printStackTrace();
-            System.exit(0);
+            System.exit(1);
         }
     }
 }
