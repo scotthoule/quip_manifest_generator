@@ -17,8 +17,8 @@ def main(my_list, image_list):
             for line_a in fa:
                 with open(image_list) as fb:
                     for line_b in fb:
-                        x = line_a.replace(".json", "").strip()
-                        y = line_b.replace(".svs", "").strip()
+                        x = line_a[:line_a.find(".")].strip()
+                        y = line_b[:line_b.find(".")].strip()
                         row = line_b.strip().split(',')
                         if x in y:
                             print(row[1] + "," + row[2] + "," + row[3] + "," + line_a.strip())
