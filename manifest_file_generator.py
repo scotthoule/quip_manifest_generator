@@ -39,8 +39,7 @@ def main(my_list, image_list, manifest_type):
 
 if __name__ == '__main__':
     # 1) Download httplinks.csv from PathDB
-    # 2) REMOVE CSV HEADER!
-    # 3) ls -l | awk '{print $9}' > ~/myList.list  # Make sure no blank lines or 'extra' files that don't belong.
+    # 2) ls -l | awk '{print $9}' > ~/myList.list  # Make sure no blank lines or 'extra' files that don't belong.
     if len(sys.argv) < 4:
         print('\nUSAGE:\n    python ' + os.path.basename(
             __file__) + ' /path/to/yourImageList.list /path/to/httplinks.csv manifest_type [map | segmentation]')
