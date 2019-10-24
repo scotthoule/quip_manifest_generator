@@ -18,6 +18,9 @@ def main(my_list, image_list, manifest_type):
         if manifest_type == 'map':
             print('studyid,clinicaltrialsubjectid,imageid,filename')
 
+        if manifest_type == 'image':
+            print('path,studyid,clinicaltrialsubjectid,imageid')
+
         with open(my_list) as fa:
             for line_a in fa:
                 with open(image_list) as fb:
@@ -30,6 +33,8 @@ def main(my_list, image_list, manifest_type):
                                 print(row[1] + "," + row[2] + "," + row[3] + "," + line_a.strip())
                             if manifest_type == 'segmentation':
                                 print(line_a.strip() + "," + row[1] + "," + row[2] + "," + row[3])
+                            if manifest_type == 'image':
+                                print(row[1] + "," + row[2] + "," + row[3] + "," + line_a.strip())
                             continue
 
     except Exception as ex:
