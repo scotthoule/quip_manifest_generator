@@ -8,7 +8,7 @@ def main(my_list, image_list, manifest_type):
         sys.exit()
 
     if not os.path.isfile(image_list):
-        print("File path {} does not exist. Exiting...".format(my_list))
+        print("File path {} does not exist. Exiting...".format(image_list))
         sys.exit()
 
     try:
